@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เชิญชวนลอยกระทง</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0D1B2A;
+            color: #F0EBD8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('https://example.com/bg-image.jpg'); /* URL ของรูปภาพพื้นหลัง */
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .invitation-card {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 450px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .invitation-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .invitation-card h1 {
+            font-size: 2.5em;
+            margin: 0;
+            color: #FFD700;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .invitation-card p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-top: 10px;
+            color: #E1B07A;
+        }
+        .event-details p {
+            font-size: 1em;
+            line-height: 1.6;
+            margin-top: 10px;
+            color: #000000;
+        }
+
+        .invitation-card .event-details {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #F4A261;
+            color: #000000; /* เปลี่ยนสีฟอนต์เป็นสีดำ */
+            border-radius: 10px;
+            font-size: 1.1em;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            margin-top: 20px;
+            background-color: #FFD700;
+            color: #0D1B2A;
+            font-size: 1.2em;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #F4A261;
+            color: #fff;
+        }
+
+        #message {
+            margin-top: 25px;
+            font-size: 1.3em;
+            color: #FFD700;
+            display: none;
+            text-align: center;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .invitation-card {
+                padding: 20px;
+                max-width: 350px;
+            }
+
+            .invitation-card h1 {
+                font-size: 2em;
+            }
+
+            .btn {
+                padding: 10px 20px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="invitation-card">
+        <h1>เชิญชวนลอยกระทง</h1>
+        <p>🌕✨ ขอเชิญชวนเพื่อน ๆ มาลอยกระทงด้วยกัน(เถอะ) ในคืน moon เต็มดวง พร้อมลอยกระทงและขอพรกันได้ที่นี่ 💦</p>
+
+        <div class="event-details">
+            <p><strong>📅 วันที่:</strong> 15 พฤศจิกายน 2567</p>
+            <p><strong>📍 สถานที่:</strong> บึงสีฐาน(บันได)</p>
+            <p><strong>🕒 เวลา:</strong> 21:00 น.</p>
+        </div>
+
+        <div class="btn" onclick="showMessage()">เข้าร่วม</div>
+        <div id="message">เมื่อคุณกดปุ่มแล้วนั้น คุณจะไม่มีทางปฏิเสธข้อกล่าวหาใดๆได้ ดังนั้นกรุณามาตามนัดหมาย Luv u</div>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById("message").style.display = "block";
+        }
+    </script>
+</body>
+</html>
