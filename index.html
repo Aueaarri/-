@@ -48,6 +48,7 @@
             margin-top: 10px;
             color: #E1B07A;
         }
+
         .event-details p {
             font-size: 1em;
             line-height: 1.6;
@@ -59,7 +60,7 @@
             margin-top: 20px;
             padding: 15px;
             background-color: #F4A261;
-            color: #000000; /* เปลี่ยนสีฟอนต์เป็นสีดำ */
+            color: #000000;
             border-radius: 10px;
             font-size: 1.1em;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -84,13 +85,17 @@
             color: #fff;
         }
 
-        #message {
+        #message, #denyMessage {
             margin-top: 25px;
             font-size: 1.3em;
             color: #FFD700;
             display: none;
             text-align: center;
             font-style: italic;
+        }
+
+        #denyMessage {
+            color: #FF6347; /* สีสำหรับข้อความปฏิเสธ */
         }
 
         @media (max-width: 768px) {
@@ -122,12 +127,21 @@
         </div>
 
         <div class="btn" onclick="showMessage()">เข้าร่วม</div>
+        <div class="btn" onclick="denyMessage()">ปฏิเสธ</div>
+
         <div id="message">เมื่อคุณกดปุ่มแล้วนั้น คุณจะไม่มีทางปฏิเสธข้อกล่าวหาใดๆได้ ดังนั้นกรุณามาตามนัดหมาย Luv u</div>
+        <div id="denyMessage">เสียใจด้วยคุณไม่มีสิทธิ์ปฏิเสธนะคะ กรุณาทำใจและไปกับเรา</div>
     </div>
 
     <script>
         function showMessage() {
             document.getElementById("message").style.display = "block";
+            document.getElementById("denyMessage").style.display = "none"; // ซ่อนข้อความปฏิเสธ
+        }
+
+        function denyMessage() {
+            document.getElementById("denyMessage").style.display = "block";
+            document.getElementById("message").style.display = "none"; // ซ่อนข้อความเข้าร่วม
         }
     </script>
 </body>
